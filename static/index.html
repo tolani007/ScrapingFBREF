@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FBref Premier League Scraper</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Football_pitch.svg" alt="Pitch" class="logo" />
+      <div>
+        <h1>FBref Premier League Scraper</h1>
+        <p>Quickly explore fixtures for any season without leaving your browser.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a href="https://fbref.com/en/comps/9/Premier-League-Stats" target="_blank" rel="noreferrer">Open FBref</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div class="field">
+        <label for="season">Season (YYYY-YYYY)</label>
+        <input id="season" type="text" placeholder="2023-2024" value="2023-2024" />
+      </div>
+      <button id="scrape" class="primary">Scrape Fixtures</button>
+    </section>
+
+    <section class="status" id="status" aria-live="polite"></section>
+
+    <section class="results" id="results">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Round</th>
+              <th>Home</th>
+              <th>Away</th>
+              <th>Score</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr><td colspan="6" class="placeholder">No fixtures loaded yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Scraper runs locally using the code in this repository. Data courtesy of <a href="https://fbref.com/" target="_blank" rel="noreferrer">FBref</a>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

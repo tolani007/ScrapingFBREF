@@ -24,6 +24,17 @@ pip install requests pandas beautifulsoup4 fake-useragent
 
 python scraper.py
 
+Interactive Web UI
+
+Want to trigger scrapes from the browser? An interactive front end powered by Flask is included:
+
+1) Install the requirements (see above).
+2) Start the server:
+
+python app.py
+
+3) Open http://localhost:8000 to enter a season (e.g., 2023-2024) and scrape fixtures directly from FBref.
+
 How It Works
 
 1. Checkpoint System
